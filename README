@@ -1,4 +1,5 @@
-Detailed overview on my blog at: http://www.shortbus.ninja/phishbait-scraping-the-web-for-email-addresses/
+Detailed overview on my blog at: 
+http://www.shortbus.ninja/phishbait-scraping-the-web-for-email-addresses/
 
 Usage - ./linkedin_harvest.py [Filename] [Format num] [suffix]
 
