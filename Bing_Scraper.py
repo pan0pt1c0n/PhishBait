@@ -51,8 +51,8 @@ def format_3(names,suffix):
     emails = []
     for x in names:
         try:
-            first = names.split(' ')[0].lower()
-            last = names.split(' ')[1].lower()
+            first = x.split(' ')[0].lower()
+            last = x.split(' ')[1].lower()
             emails.append(first[0] + last + '@' + suffix)
         except:
             pass
@@ -62,8 +62,8 @@ def format_4(names,suffix):
     emails = []
     for x in names:
         try:
-            first = names.split(' ')[0].lower()
-            last = names.split(' ')[1].lower()
+            first = x.split(' ')[0].lower()
+            last = x.split(' ')[1].lower()
             emails.append(first + '_' + last + '@' + suffix)
         except:
             pass
@@ -78,7 +78,6 @@ br = mechanize.Browser()
 br.set_handle_robots(False) 
 response = br.open('http://www.bing.com/search?q=(site%3A%22www.linkedin.com%2Fin%2F%22%20OR%20site%3A%22www.linkedin.com%2Fpub%2F%22)%20%26%26%20(NOT%20site%3A%22www.linkedin.com%2Fpub%2Fdir%2F%22)%20%26%26%20%22'+company+'%22&qs=n&form=QBRE&pq=(site%3A%22www.linkedin.com%2Fin%2F%22%20or%20site%3A%22www.linkedin.com%2Fpub%2F%22)%20%26%26%20(not%20site%3A%22www.linkedin.com%2Fpub%2Fdir%2F%22)%20%26%26%20%22'+company+'%22').read()
 soup = BeautifulSoup(response)
-count = int((((soup.find('span',{"class":'sb_count'})).renderContents()).split(' ')[0]).replace(",",""))
 
 link_list = []
 for link in br.links():
@@ -123,6 +122,8 @@ while more_records == True:
         emails = format_2(names,suffix)
     elif format == 3:
         emails = format_3(names,suffix)
+    elif format == 4:
+        emails = format_4(names,suffix)
     for x in emails:
         print x
         file.write(x+"\n")
