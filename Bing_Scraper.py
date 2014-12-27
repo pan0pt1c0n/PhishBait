@@ -4,19 +4,19 @@ import sys
 import mechanize
 
 print "\n*************************************************"
-print "**  LinkedIn Email Harvester                   **"
+print "**  Bing Scrape Email Harvester                **"
 print "**  by H@ck1tHu7ch (Justin Hutchens)           **"
 print "**  ...GONE PHISHING!!!                        **"
 print "*************************************************\n\n"
 
 if len(sys.argv) != 4:
-    print "Usage - ./linkedin_harvest.py [Format num] [suffix] [output_file]"
+    print "Usage - ./Bing_Scraper.py [Format num] [suffix] [output_file]"
     print "\nFORMATS:"
     print "1 - [first].[last]@[suffix]"
     print "2 - [first][last]@[suffix]"
     print "3 - [first initial][last]@[suffix]"
     print "4 - [first]_[last]@[suffix]\n"
-    print "Example - ./linkedin_harvest.py 1 company.com output.txt"
+    print "Example - ./Bing_Scraper.py 1 company.com output.txt"
     print "Example will create email list in the form of john.smith@company.com\n\n"
     sys.exit()
 
