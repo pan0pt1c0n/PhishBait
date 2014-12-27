@@ -17,7 +17,7 @@ if len(sys.argv) != 4:
     print "3 - [first initial][last]@[suffix]"
     print "4 - [first]_[last]@[suffix]\n"
     print "Example - ./linkedin_harvest.py 1 company.com output.txt"
-    print "Example will create email list in the form of john.smith@company.com"
+    print "Example will create email list in the form of john.smith@company.com\n\n"
     sys.exit()
 
 format = int(sys.argv[1])
