@@ -14,7 +14,8 @@ if len(sys.argv) != 4:
     print "\nFORMATS:"
     print "1 - [first].[last]@[suffix]"
     print "2 - [first][last]@[suffix]"
-    print "3 - [first_initial][last]@[suffix]\n"
+    print "3 - [first initial][last]@[suffix]"
+    print "4 - [first]_[last]@[suffix]\n"
     print "Example - ./linkedin_harvest.py 1 company.com output.txt"
     print "Example will create email list in the form of john.smith@company.com"
     sys.exit()
@@ -57,6 +58,16 @@ def format_3(names,suffix):
             pass
     return emails
 
+def format_4(names,suffix):
+    emails = []
+    for x in names:
+        try:
+            first = names.split(' ')[0].lower()
+            last = names.split(' ')[1].lower()
+            emails.append(first + '_' + last + '@' + suffix)
+        except:
+            pass
+    return emails
 
 ## Get Company Name & URL encode
 company = raw_input("Enter the company name: ")
@@ -89,6 +100,11 @@ elif format == 2:
     emails = format_2(names,suffix)
 elif format == 3:
     emails = format_3(names,suffix)
+elif format == 4:
+    emails = format_4(names,suffix)
+else:
+    print "\n\n[-] ERROR: Improper Format Value Supplied\n"
+    sys.exit()
 for x in emails:
     print x
     file.write(x+"\n")
