@@ -1,12 +1,6 @@
-Detailed overview on my blog at: 
+Detailed overview of Bing_Scraper.py:
+http://www.shortbus.ninja/email-address-harvesting-for-phishing-attacks/
+
+Detailed overview of linkedin_harvest.py: 
 http://www.shortbus.ninja/phishbait-scraping-the-web-for-email-addresses/
 
-Usage - ./linkedin_harvest.py [Filename] [Format num] [suffix]
-
-FORMATS:
-1 - [first].[last]@[suffix]
-2 - [first][last]@[suffix]
-3 - [first_initial][last]@[suffix]
-
-Example - ./linkedin_harvest.py input.txt 1 company.com
-Example will create emails in the form of john.smith@company.com from the input.txt file
