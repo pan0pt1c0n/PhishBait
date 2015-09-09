@@ -5,7 +5,7 @@ import mechanize
 
 print "\n*************************************************"
 print "**  Bing Scrape Email Harvester                **"
-print "**  by H@ck1tHu7ch (Justin Hutchens)           **"
+print "**  by Pan0pt1c0n (Justin Hutchens)           **"
 print "**  ...GONE PHISHING!!!                        **"
 print "*************************************************\n\n"
 
