@@ -6,7 +6,7 @@ import sys
 if len(sys.argv) != 4:
     print "\n*************************************************"
     print "**  LinkedIn Email Harvester                   **"
-    print "**  by H@ck1tHu7ch (Justin Hutchens)           **"
+    print "**  by Pan0pt1c0n (Justin Hutchens)           **"
     print "**  ...GONE PHISHING!!!                        **"
     print "*************************************************\n\n"
     print "\n\nUsage - ./linkedin_harvest.py [Filename] [Format num] [suffix]"
